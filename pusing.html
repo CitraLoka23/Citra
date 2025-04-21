@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Céla Vie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+            html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .content-wrap {
+            flex: 1 0 auto;
+        }
+        footer {
+            flex-shrink: 0;
+        }
+
+        #mobileMenuCheckbox {
+            display: none;
+        }
+        #mobileMenu {
+            display: none;
+        }
+        #mobileMenuCheckbox:checked ~ #mobileMenu {
+            display: block;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mainPurple: '#3B3486',
+                        lightPurple: '#7743DB',
+                        creamYellow: '#FFE9B1',
+                        bgCream: '#FCFDF2'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen flex flex-col font-poppins bg-bgCream">
+    <nav class="bg-mainPurple text-white p-4 shadow-md">
+        <div class="container mx-auto flex items-center justify-center md:justify-between gap-4">
+            <div class="text-2xl font-bold">Céla Vie</div>
+            
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="#hero" class="hover:text-creamYellow">Home</a>
+                <a href="#about" class="hover:text-creamYellow">About</a>
+                <a href="#product" class="hover:text-creamYellow">Product</a>
+                <a href="#riview" class="hover:text-creamYellow">Review</a>
+                <a href="#contact" class="hover:text-creamYellow">Contact</a>
+            </div>
+
+           
+            <div class="md:hidden flex items-center">
+                <label for="mobileMenuCheckbox" class="text-white cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </label>
+            </div>
+
+       
+
+       
+        <input type="checkbox" id="mobileMenuCheckbox" class="hidden">
+        <div id="mobileMenu" class="md:hidden bg-lightPurple px-4 py-2">
+            <a href="#hero" class="block py-2 text-white hover:text-creamYellow">Home</a>
+            <a href="#about" class="block py-2 text-white hover:text-creamYellow">About</a>
+            <a href="#product" class="block py-2 text-white hover:text-creamYellow">Product</a>
+            <a href="#riview" class="block py-2 text-white hover:text-creamYellow">Riview</a>
+            <a href="#contact" class="block py-2 text-white hover:text-creamYellow">Contact</a>
+            
+        </div>
+    </nav>
+
+    <div class="flex-grow">
+    <section id="hero" class="bg-gradient-to-r from-mainPurple to-lightPurple text-white py-16 px-4 w-full">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Diskon hingga 50% untuk semua Pakaian Pria</h1>
+                <p class="text-lg mb-6">Promosi khusus hanya minggu ini! Perbarui koleksi pakaian Anda dengan koleksi premium kami.</p>
+                    <a href="#product">
+                <button class="bg-creamYellow text-mainPurple font-bold py-3 px-8 rounded-lg hover:bg-yellow-200 transition duration-300">
+                    Pesan Sekarang
+                </button>
+            </a>
+                <div class="mt-4 text-sm bg-white text-mainPurple inline-block px-3 py-1 rounded-full">
+                    Limited time offer!
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1507297448044-a99b358cd06e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzY2fHxmYXNoaW9ufGVufDB8fDB8fHww" alt="Men's Fashion" class="rounded-lg shadow-xl" style="max-height: 300px;">
+            </div>
+        </div>
+    </section>
+
+
+
+ 
+    <section id="about" class="py-16 bg-white px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-mainPurple">About Céla Vie</h2>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://images.pexels.com/photos/135620/pexels-photo-135620.jpeg?auto=compress&cs=tinysrgb&w=600  " alt="Our Store" class="rounded-lg shadow-md w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-lightPurple">Your Favorite Online Shop</h3>
+                    <p class="text-gray-700 mb-4">"Céla Vie adalah lebih dari sekadar fashion — ini adalah gaya hidup. Kami menghadirkan sentuhan elegan dan modern dalam setiap detail, terinspirasi dari keindahan keseharian. Dengan desain yang timeless dan kualitas terbaik, Céla Vie siap menemani langkahmu dalam mengekspresikan siapa dirimu sebenarnya."</p>
+                    <p class="text-gray-700">Karena bagi kami, setiap gaya punya cerita.
+                         Live your style <span class="font-bold">— Céla Vie.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="product" class="py-16 bg-bgCream px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col sm:flex-row justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold text-mainPurple mb-4 sm:mb-0">Our Products</h2>
+                <div class="flex flex-wrap gap-2">
+                    <a href="menu.html" class="px-4 py-2 bg-mainPurple text-white rounded-lg hover:bg-opacity-90">
+                        View All
+                    </a>
+                </div>
+            </div>
+
+  
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+        <div class="relative">
+            <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=400" alt="Casual T-Shirt" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-mainPurple">Casual T-Shirt</h3>
+            <p class="text-gray-600 mb-4">Kaos katun lembut tersedia dalam berbagai warna. Sempurna untuk dipakai sehari-hari.</p>
+            <div class="flex justify-between items-center">
+                <span class="text-lg font-bold text-lightPurple">Rp224.000</span>
+                <button class="bg-mainPurple text-white px-4 py-2 rounded-lg hover:bg-opacity-90">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+  
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+        <div class="relative">
+            <img src="https://images.unsplash.com/photo-1615559301915-ee4f4eb0400b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEyfHxwcnRpbnRlZCUyMHNoaXJ0fGVufDB8fDB8fHww" alt="Printed Shirt" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-mainPurple">Printed Shirt</h3>
+            <p class="text-gray-600 mb-4">Kemeja bermotif cetak bergaya dengan desain unik. 100% katun premium.</p>
+            <div class="flex justify-between items-center">
+                <span class="text-lg font-bold text-lightPurple">Rp289.000 </span>
+                <button class="bg-mainPurple text-white px-4 py-2 rounded-lg hover:bg-opacity-90">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+        <div class="relative">
+            <img src="https://plus.unsplash.com/premium_photo-1689977492903-bd8d201af5bd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTc3fHx3b21lbiUyMGJsb3VzZXxlbnwwfHwwfHx8MA%3D%3D" alt="Women's Blouse" class="w-full h-48 object-cover">
+            <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                NEW!
+            </div>
+        </div>
+        <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-mainPurple">Women's Blouse</h3>
+            <p class="text-gray-600 mb-4">Blus elegan untuk acara kantor atau kasual. Ringan dan nyaman.</p>
+            <div class="flex justify-between items-center">
+                <span class="text-lg font-bold text-lightPurple">Rp334.000</span>
+                <button class="bg-mainPurple text-white px-4 py-2 rounded-lg hover:bg-opacity-90">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+   
+
+<section id="riview" class="py-16 bg-white px-9">
+    <div class="container mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-mainPurple mb-2">Apa yang pelanggan kami katakan</h2>
+            <p class="text-lightPurple font-medium mb-4">Testimonial</p>
+            <p class="text-gray-600 max-w-2xl mx-auto">Setiap sentuhan dari Cela Vie selalu meninggalkan kesan. Inilah beberapa pengalaman nyata dari mereka yang telah merasakan kualitas dan gaya kami.   </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+            <div class="bg-bgCream p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
+                <div class="flex justify-center -mt-12 mb-4">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Victor" class="w-24 h-24 rounded-full object-cover ">
+                </div>
+                <p class="text-gray-700 mb-6 italic">"Aku suka banget koleksi terbarunya. Stylish tapi tetap simpel. Pokoknya wajib punya!"</p>
+                <div>
+                    <h4 class="font-semibold text-mainPurple">Victor</h4>
+                    
+                </div>
+            </div>
+
+        
+            <div class="bg-bgCream p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
+                <div class="flex justify-center -mt-12 mb-4">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTl8fGh1bWFufGVufDB8fDB8fHww" alt="Satya Nadella" class="w-24 h-24 rounded-full object-cover ">
+                </div>
+                <p class="text-gray-700 mb-6 italic">"Cela Vie benar-benar berbeda! Bahannya nyaman, desainnya elegan, dan pengirimannya cepat. Sangat puas!"</p>
+                <div>
+                    <h4 class="font-semibold text-mainPurple">Satya Nadella</h4>
+                    
+                </div>
+            </div>
+
+      
+            <div class="bg-bgCream p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
+                <div class="flex justify-center -mt-12 mb-4">
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Virat Kohli" class="w-24 h-24 rounded-full object-cover">
+                </div>
+                <p class="text-gray-700 mb-6 italic">"Cela Vie bikin aku tampil percaya diri setiap hari. Thank you tim Cela Vie!"</p>
+                <div>
+                    <h4 class="font-semibold text-mainPurple">Virat Kohli</h4>
+                    
+                </div>
+            </div>
+
+            <div class="bg-bgCream p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
+                <div class="flex justify-center -mt-12 mb-4">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGh1bWFufGVufDB8fDB8fHww" alt="Satya Nadella" class="w-24 h-24 rounded-full object-cover ">
+                </div>
+                <p class="text-gray-700 mb-6 italic">"Dari kemasan sampe detail produknya, semuanya rapi dan berkualitas. Beneran worth it!"</p>
+                <div>
+                    <h4 class="font-semibold text-mainPurple">Satya Nadella</h4>
+                    
+                </div>
+            </div>
+
+            <div class="bg-bgCream p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
+                <div class="flex justify-center -mt-12 mb-4">
+                    <img src="https://plus.unsplash.com/premium_photo-1671656349218-5218444643d8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGh1bWFufGVufDB8fDB8fHww" alt="Satya Nadella" class="w-24 h-24 rounded-full object-cover ">
+                </div>
+                <p class="text-gray-700 mb-6 italic">"Belanja di Cela Vie itu beneran gampang banget. Pelayanan ramah, dan produknya premium"</p>
+                <div>
+                    <h4 class="font-semibold text-mainPurple">Satya Nadella</h4>
+                    
+                </div>
+            </div>
+
+            <div class="bg-bgCream p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
+                <div class="flex justify-center -mt-12 mb-4">
+                    <img src="https://images.unsplash.com/photo-1604072366595-e75dc92d6bdc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODd8fGh1bWFufGVufDB8fDB8fHww" alt="Satya Nadella" class="w-24 h-24 rounded-full object-cover ">
+                </div>
+                <p class="text-gray-700 mb-6 italic">"Aku jarang riview online, tapi Cela Vie ini emang harus diancungin jempol. Gak nyesel beli disini!"</p>
+                <div>
+                    <h4 class="font-semibold text-mainPurple">Satya Nadella</h4>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+</div>
+   
+
+
+<section id="contact" class="py-16 bg-bgCream px-4">
+    <div class="container mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-mainPurple mb-2">Hubungi Kami</h2>
+        <p class="text-lightPurple font-medium mb-4">Kami siap membantu Anda</p>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Ada pertanyaan atau butuh bantuan? Silakan hubungi kami melalui form berikut atau informasi kontak di bawah.
+        </p>
+      </div>
+      <div class="flex justify-center">
+        <div class="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-6 text-mainPurple">Kirim Pesan</h3>
+          <form class="space-y-4">
+            <div>
+              <label for="name" class="block text-gray-700 mb-2">Nama Lengkap</label>
+              <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lightPurple"/>
+            </div>
+            <div>
+              <label for="email" class="block text-gray-700 mb-2">Email</label>
+              <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lightPurple" />
+            </div>
+            <div>
+              <label for="phone" class="block text-gray-700 mb-2">Nomor Telepom</label>
+              <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lightPurple"/>
+            </div>
+            <div>
+              <label for="message" class="block text-gray-700 mb-2">Pesan</label>
+              <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lightPurple" ></textarea>
+            </div>
+            <button type="submit" class="bg-mainPurple text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition duration-300 w-full">Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+      
+
+
+    <footer class="bg-mainPurple text-white p-2 ">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Céla Vie</h3>
+                    <p class="text-sm">Your favorite online shopping destination since 1980.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-creamYellow">Home</a></li>
+                        <li><a href="#" class="hover:text-creamYellow">About Us</a></li>
+                        <li><a href="#" class="hover:text-creamYellow">Contact</a></li>
+                        <li><a href="#" class="hover:text-creamYellow">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Customer Service</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-creamYellow">Returns Policy</a></li>
+                        <li><a href="#" class="hover:text-creamYellow">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-creamYellow">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-sm mb-2">Subscribe for updates and promotions</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-3 py-2 text-gray-800 rounded-l focus:outline-none w-full">
+                        <button type="submit" class="bg-creamYellow text-mainPurple px-4 py-2 rounded-r font-medium">
+                            Join
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
+                <p>&copy; 2025 Céla Vie. All rights reserved. | <a href="#" class="hover:text-creamYellow">Privacy Policy</a> | <a href="#" class="hover:text-creamYellow">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
